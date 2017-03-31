@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM container-registry.phenomenal-h2020.eu/phnmnl/metfrag-cli:latest
 
 LABEL software.version=0.1
 LABEL version=0.1
