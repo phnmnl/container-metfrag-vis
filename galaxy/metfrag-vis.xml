@@ -4,13 +4,13 @@
 <tool id="metfrag-vis" name="metfrag-vis" version="0.1">
   <description></description>
   <command><![CDATA[
-	mkdir /tmp/outputdir/;
-	bash /usr/local/bin/visualize-metfrag.sh $resultFiles /tmp/outputdir/combined_top1_cands.csv $parameterFiles;
-	java -jar /usr/local/bin/ConvertMetFragCSV.jar csv=/tmp/outputdir/combined_top1_cands.csv output=/tmp/outputdir/combined_top1_cands.tex propertyWhiteList=Score,SampleName,Identifier,MolecularFormula,CompoundName,NumberPeaksUsed,NoExplPeaks,MetFragWebURL format=tex;
-	pdflatex -output-directory /tmp/outputdir/ /tmp/outputdir/combined_top1_cands.tex;
-	mv /tmp/outputdir/combined_top1_cands.pdf $output;
-	rm -rf /tmp/outputdir/;
-	rm /tmp/*.png;
+  	mkdir /tmp/outputdir/;
+        bash /usr/local/bin/visualize-metfrag.sh $resultFiles /tmp/outputdir/combined_top1_cands.csv $parameterFiles;
+        java -jar /usr/local/bin/ConvertMetFragCSV.jar csv=/tmp/outputdir/combined_top1_cands.csv output=/tmp/outputdir/combined_top1_cands.tex propertyWhiteList=Score,SampleName,Identifier,MolecularFormula,CompoundName,NumberPeaksUsed,NoExplPeaks,MetFragWebURL format=tex;
+        pdflatex -output-directory /tmp/outputdir/ /tmp/outputdir/combined_top1_cands.tex;
+        mv /tmp/outputdir/combined_top1_cands.pdf $output;
+        rm -rf /tmp/outputdir/;
+        rm /tmp/*.png;
   ]]>
   </command>
   <inputs>
@@ -18,7 +18,7 @@
     <param name="parameterFiles" type="data" format="txt" multiple="True" optional="False" label="MetFrag parameter files" />
   </inputs>
   <outputs>
-	<data name="output" type="data" format="pdf" label="camera-find-adducts plot" />	
+	<data name="output" type="data" format="pdf" label="metfrag-vis-results" />	
   </outputs>
   <help>.</help>
 </tool>

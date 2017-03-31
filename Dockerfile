@@ -12,7 +12,7 @@ LABEL Description="MetFrag results visualization."
 RUN apt-get -y update
 
 # Install development files needed
-RUN apt-get -y install maven texlive-latex-base git openjdk-8-jdk-headless 
+RUN apt-get -y install maven texlive-latex-base git openjdk-8-jdk-headless texlive-fonts-recommended
 
 # Clean up
 RUN apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /tmp/* /var/tmp/*
