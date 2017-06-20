@@ -24,4 +24,8 @@ ADD scripts/* /usr/local/bin/
 
 RUN chmod +x /usr/local/bin/*
 
+# add test case
+ADD runTest1.sh /usr/local/bin/runTest1.sh
+RUN chmod +x /usr/local/bin/runTest1.sh
+
 # Define Entry point script
