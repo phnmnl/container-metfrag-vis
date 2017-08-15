@@ -39,3 +39,10 @@ This tool uses MetFrag generated result CSV files and its parameter files to gen
 ```bash
 docker build -t container-metfrag-vis .
 ```
+Alternatively, pull from repo:
+```bash
+docker pull container-registry.phenomenal-h2020.eu/phnmnl/container-metfrag-vis
+```
+
+## Usage Instructions
+On a PhenoMeNal Cloud Research Environment Galaxy environment, go to MS tool category or type in metfrag-vis in the search tools text field, and then click on metfrag-vis and select the inputs for MetFrag result and parameter files generated in a previous step, then press run.
