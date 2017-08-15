@@ -37,7 +37,7 @@ This tool uses MetFrag generated result CSV files and its parameter files to gen
 ## Installation 
 
 ```bash
-docker build -t container-metfrag-vis .
+docker build -t metfrag-vis .
 ```
 Alternatively, pull from repo:
 ```bash
