@@ -41,7 +41,7 @@ docker build -t container-metfrag-vis .
 ```
 Alternatively, pull from repo:
 ```bash
-docker pull container-registry.phenomenal-h2020.eu/phnmnl/container-metfrag-vis
+docker pull container-registry.phenomenal-h2020.eu/phnmnl/metfrag-vis
 ```
 
 ## Usage Instructions
