@@ -25,7 +25,7 @@ then
 	do
 		line=$(cat ${paramArray[${fileindex}]})
 		numLines=$(wc -l $i | cut -d' ' -f1)
-		if [ "$numLines" -ne "0" ]			# only add parameters if csv file has entries
+		if [ "$numLines" -gt "1" ]			# only add parameters if csv file has entries
 		then
 			# convert the parameters 
 			sampleName=$(echo $line | sed "s/.*SampleName\s*=\s*//" | sed "s/\s.*//" | sed "s/.*\/\(.*\)\.txt/\1/")		# get SampleName
