@@ -15,7 +15,7 @@
   </command>
   <inputs>
     <param name="resultFiles" type="data" format="csv" multiple="True" optional="False" label="MetFrag result files" />
-    <param name="parameterFiles" type="data" format="txt" multiple="True" optional="False" label="MetFrag parameter files" />
+    <param name="parameterFiles" type="data" format="txt" multiple="True" optional="True" label="MetFrag parameter files" />
   </inputs>
   <outputs>
 	<data name="output" type="data" format="pdf" label="metfrag-vis-results" />	
