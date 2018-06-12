@@ -1,5 +1,5 @@
 # Metfrag-Vis
-Version: 0.1
+Version: 0.4
 
 ## Short Description
 
