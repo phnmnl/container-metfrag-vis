@@ -21,7 +21,7 @@ RUN apt-get -y clean && apt-get -y autoremove && rm -rf /var/lib/{cache,log}/ /t
 RUN git clone https://github.com/c-ruttkies/ConvertMetFragCSV.git && cd ConvertMetFragCSV && mvn clean install -am && mv target/ConvertMetFragCSV-*-jar-with-dependencies.jar /usr/local/bin/ConvertMetFragCSV.jar 
 RUN wget https://msbi.ipb-halle.de/~cruttkie/metfrag/MetFrag2.4.5-Tools.jar && mv MetFrag2.4.5-Tools.jar /usr/local/bin/MetFrag-Tools.jar
 
-RUN apt-get -y purge git maven openjdk-8-jdk-headless wget
+RUN apt-get -y purge git maven openjdk-8-jdk-headless
 
 ADD scripts/* /usr/local/bin/
 
