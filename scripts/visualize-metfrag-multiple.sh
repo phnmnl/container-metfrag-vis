@@ -24,8 +24,9 @@ head -n 1 $csvfile > $outputfile
 scoreColumnIndex=$(head -n 1 $csvfile | tr ',' '\n' | grep -n "^Score$" | cut -d":" -f1)
 OLDIFS=$IFS
 IFS=$'\n'
-for i in $(cut -d"," -f1,2 $csvfile | tail -n +2); do
-   paste <(grep "^$i" $csvfile | cut -d"," -f$scoreColumnIndex) <(grep "^$i" $csvfile) | sort -n | cut -f2 >> $outputfile
+# select top1 candidate for each parent RT and m/z
+for i in $(cut -d"," -f1,2 $csvfile | tail -n +2 | sort | uniq); do
+   paste <(grep "^$i" $csvfile | cut -d"," -f$scoreColumnIndex) <(grep "^$i" $csvfile) | sort -n | cut -f2 | head -n 1>> $outputfile
 done
 IFS=$OLDIFS
 fileindex=0
