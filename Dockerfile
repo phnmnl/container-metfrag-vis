@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-LABEL software.version=0.4
+LABEL software.version=0.4.1
 LABEL version=0.5
 LABEL software=metfrag-vis
 
