@@ -26,7 +26,7 @@ OLDIFS=$IFS
 IFS=$'\n'
 # select top1 candidate for each parent RT and m/z
 for i in $(cut -d"," -f1,2 $csvfile | tail -n +2 | sort | uniq); do
-   paste <(grep "^$i" $csvfile | cut -d"," -f$scoreColumnIndex) <(grep "^$i" $csvfile) | sort -n | cut -f2 | head -n 1 >> $outputfile
+   paste <(grep "^$i" $csvfile | cut -d"," -f$scoreColumnIndex) <(grep "^$i" $csvfile) | sort -rn | cut -f2 | head -n 1 >> $outputfile
 done
 IFS=$OLDIFS
 fileindex=0
